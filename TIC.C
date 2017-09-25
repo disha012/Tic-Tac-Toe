@@ -3,12 +3,20 @@
 #include<time.h>
 char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 void first ( int mark) {
+    time_t t;
+   srand((unsigned) time(&t)); int r;
 switch(mark) {
 case 1: square[5]='O';break;
 case 2: square[5]='O';break;
 case 3: square[5]='O';break;
 case 4: square[5]='O';break;
-case 5: square[9]='O';break;
+case 5:
+
+     r=(rand()%9)+1;
+    if(r==5)
+    r=(rand()%9)+1;
+
+    square[r]='O';break;
 case 6: square[5]='O';break;
 case 7: square[5]='O';break;
 case 8: square[5]='O';break;
