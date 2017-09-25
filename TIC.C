@@ -237,7 +237,7 @@ int main() {
 	    printf("Invalid move ");
         continue;
 	}
-	int h=checkwin();
+
 		i++;
 		if(i==5) {
                 board();
@@ -248,13 +248,13 @@ int main() {
 		first(choice);
 		else
         compmove();
-
+    int h=checkwin();
     if(h==2) {
-            printf("player wins");board();break;}
+            printf("\n\nplayer wins\n\n");board();break;}
 	else if(h==1){
-	    printf("computer wins");board();break;}
+	    printf("\n\ncomputer wins\n\n");board();break;}
 	else if(h==0){
-	    printf("draw");board();break;}
+	    printf("\n\ndraw\n\n");board();break;}
 	else if(h==-1){
         board();
         continue;
